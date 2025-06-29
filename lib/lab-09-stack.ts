@@ -15,7 +15,7 @@ export class Lab09Stack extends cdk.Stack {
       code: lambda.Code.fromAsset("lambda"),
       handler: "main.handler",
       environment: {
-        VERSION: process.env.VERSION || "1.0.0"
+        VERSION: process.env.VERSION || "0.0"
       }
     });
 
