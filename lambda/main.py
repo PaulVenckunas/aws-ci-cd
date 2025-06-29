@@ -1,6 +1,7 @@
 import os
 # boto3 is aws-sdk for python
 import boto3
+import json
 
 
 def handler(event, context):
@@ -33,5 +34,8 @@ def handler(event, context):
     }
     return {
         "statusCode": 200,
-        "body": response_body
+        "body": json.dumps(response_body),
+        "headers": {
+            "Content-Type": "application/json"
+        }
     }
