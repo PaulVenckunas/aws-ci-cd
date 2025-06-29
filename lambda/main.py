@@ -18,7 +18,7 @@ def handler(event, context):
     visit_count = response.get("Item", {}).get("value", 0)
 
     # Increment the visit count and write it back to the table
-    new_visit_count = visit_count + 1
+    new_visit_count = 1
     table.put_item(Item={"key": "visit_count", "value": new_visit_count})
 
     version = os.environ.get("VERSION", "0.0")
