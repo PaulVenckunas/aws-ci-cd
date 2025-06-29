@@ -1,9 +1,9 @@
+import os
+
 def handler(event, context):
-    print(event)
-    response_body = {
-        "message": "Hello World",
-        "version": "1.0.1"
-    }
+
+    version = os.environ.get()
+    response_body = { "message": "Hello World", "version": version }
     return {
         "statusCode": 200,
         "body": response_body
