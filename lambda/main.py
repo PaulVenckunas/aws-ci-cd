@@ -7,9 +7,9 @@ import json
 def handler(event, context):
 
     # Raw event data.
-    path = event["rawPath"]
-    if path != "/":
-        return {"statusCode": 404, "body": "Not found."}
+    # path = event["rawPath"]
+    # if path != "/":
+    #     return {"statusCode": 404, "body": "Not found."}
 
     # get a reference to the DDB table
     dynamodb = boto3.resource("dynamodb")
